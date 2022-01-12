@@ -33,8 +33,8 @@ void NAVA_PID::compute()
   if(pid >  1000)
      pid =  1000;
 
-  pwm_right = throttle - pitch_pid;
-  pwm_left = throttle + pitch_pid;
+  pwm_right = throttle - pid;
+  pwm_left = throttle + pid;
 
   if(pwm_right < 1000)
      pwm_right = 1000;
